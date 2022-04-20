@@ -17,7 +17,7 @@ export default function UserList() {
     (state: RootState) => state.users
   );
 
-  useEffect(() => {    
+  useEffect(() => {
     dispatch(getUserList());
   }, [dispatch]);
 
@@ -29,15 +29,13 @@ export default function UserList() {
     <div aria-busy></div>
   ) : (
     <>
-      <h1 >User List</h1>
+      <h1>User List</h1>
       <Sort>
-        <h2 className="visually-hidden">Sort user list</h2>
+        <h2 className='visually-hidden'>Sort user list</h2>
         <SortItem>
           Sort
           <select onChange={(e) => dispatch(setSortKey(e.target.value))}>
-            <option value='name' selected>
-              Name
-            </option>
+            <option value='name'> Name</option>
             <option value='city'>City</option>
             <option value='company'>Company</option>
           </select>
@@ -45,9 +43,7 @@ export default function UserList() {
         <SortItem>
           Order
           <select onChange={(e) => dispatch(setSortOrder(e.target.value))}>
-            <option value='asc' selected>
-              ASC
-            </option>
+            <option value='asc'> ASC</option>
             <option value='desc'>DESC</option>
           </select>
         </SortItem>
@@ -55,7 +51,7 @@ export default function UserList() {
 
       <List>
         {userList.map((user) => (
-          <li>
+          <li key={user.id}>
             <User>
               <header>
                 <h2>{user.name}</h2>
@@ -63,8 +59,12 @@ export default function UserList() {
                   Edit
                 </Link>
               </header>
-              <div><b>Company:</b> {user.company.name}</div>
-              <Address><b>City:</b> {user.address.city}</Address>
+              <div>
+                <b>Company:</b> {user.company.name}
+              </div>
+              <Address>
+                <b>City:</b> {user.address.city}
+              </Address>
             </User>
           </li>
         ))}
