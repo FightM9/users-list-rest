@@ -8,9 +8,10 @@ export default function Layout() {
         <Outlet />
       </Main>
       <a
-        href='https://github.com/FightM9'
-        style={{position: 'fixed', right: '0', bottom: '0', padding: '10px'}}
-        target='_blank' rel="noreferrer"
+        href='https://github.com/FightM9/users-list-rest'
+        style={{ position: "fixed", right: "0", bottom: "0", padding: "10px" }}
+        target='_blank'
+        rel='noreferrer'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
