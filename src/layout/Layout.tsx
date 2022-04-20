@@ -4,9 +4,11 @@ import { Main } from "./Layout.style";
 export default function Layout() {
   return (
     <>
-      <Main className='container'>
-        <Outlet />
-      </Main>
+      <div className='container'>
+        <Main>
+          <Outlet />
+        </Main>
+      </div>
       <a
         href='https://github.com/FightM9/users-list-rest'
         style={{ position: "fixed", right: "0", bottom: "0", padding: "10px" }}
