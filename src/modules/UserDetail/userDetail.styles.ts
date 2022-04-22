@@ -26,6 +26,10 @@ export const FormGroupe = styled.fieldset`
   & legend > * {
     margin-bottom: 1rem;
   }
+
+  &:disabled label input {
+    background: transparent;   
+  }
 `;
 
 export const Input = styled.input`
