@@ -6,7 +6,7 @@ export const Sort = styled.article`
   display: flex;
   flex-wrap: wrap; 
   align-items: center;
-  gap: 2rem;
+  gap: 1rem 2rem;
   padding: var(--block-spacing-horizontal) var(--block-spacing-horizontal);
 `;
 
