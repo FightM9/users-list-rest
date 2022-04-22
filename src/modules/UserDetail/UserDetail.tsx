@@ -45,8 +45,7 @@ export default function UserDetail() {
     };
 
     // @ts-ignore
-    dispatch(updateUserDetail(Number(id), user));
-    console.log(user);
+    dispatch(updateUserDetail(user));
     navigate("/");
   };
 
@@ -80,7 +79,8 @@ export default function UserDetail() {
               type='text'
               name='name'
               defaultValue={userDetail.name}
-              minLength={4}
+              minLength={2}
+              maxLength={50}
               required
             />
           </label>
@@ -110,6 +110,8 @@ export default function UserDetail() {
                 name='city'
                 defaultValue={userDetail.address.city}
                 required
+                minLength={2}
+                maxLength={50}
               />
             </label>
             <label>
@@ -119,6 +121,8 @@ export default function UserDetail() {
                 name='zipcode'
                 defaultValue={userDetail.address.zipcode}
                 required
+                minLength={2}
+                maxLength={35}
               />
             </label>
           </div>
@@ -129,6 +133,8 @@ export default function UserDetail() {
               name='street'
               defaultValue={userDetail.address.street}
               required
+              minLength={2}
+              maxLength={100}
             />
           </label>
         </FormGroupe>
@@ -143,6 +149,8 @@ export default function UserDetail() {
               name='email'
               defaultValue={userDetail.email}
               required
+              minLength={3}
+              maxLength={100}
             />
           </label>
           <div className='grid'>
@@ -153,6 +161,8 @@ export default function UserDetail() {
                 name='phone'
                 defaultValue={userDetail.phone}
                 required
+                minLength={3}
+                maxLength={38}
               />
             </label>
             <label>
@@ -178,7 +188,7 @@ export default function UserDetail() {
                 </hgroup>
               </legend>
 
-              <textarea name='comment'></textarea>
+              <textarea name='comment' maxLength={140}></textarea>
             </FormGroupe>
           </>
         ) : null}

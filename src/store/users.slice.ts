@@ -21,9 +21,13 @@ export const getUserDetail = createAsyncThunk(
 
 export const updateUserDetail = createAsyncThunk(
   "users/updateUserDetail",
-  async (id: number, user: any) => {
-    await request.put(`/users/${id}`, user).then((response) => {
+  async (user: any) => {  
+    await request.put(`/users/${user.id}`, user).then((response) => {
+      // PUT log
+      console.groupCollapsed('PUT');
+      console.log(`Status ${response.status}, User data:`);
       console.log(response.data);
+      console.groupEnd()
     });
   }
 );
