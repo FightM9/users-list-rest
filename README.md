@@ -11,11 +11,11 @@
 
 ## Screenshot
 
-![demo-light](assets\demo-light.png)
+![demo-light](./assets/demo-light.png)
 
-![demo-light](assets\demo-dark.png)
+![demo-light](./assets/demo-dark.png)
 
-![demo-light](.\assets\demo-dark-profile.png)
+![demo-light](./assets/demo-dark-profile.png)
 
 ## Links
 
