@@ -1,14 +1,14 @@
+import { Header } from "modules/Header";
 import { Outlet } from "react-router-dom";
 import { Main } from "./Layout.style";
 
 export default function Layout() {
   return (
-    <>
       <div className='container'>
+      <Header/>
         <Main>
           <Outlet />
         </Main>
-      </div>
       <a
         href='https://github.com/FightM9/users-list-rest'
         style={{ position: "fixed", right: "0", bottom: "0", padding: "10px" }}
@@ -27,6 +27,7 @@ export default function Layout() {
           />
         </svg>
       </a>
-    </>
+      </div>
+
   );
 }
