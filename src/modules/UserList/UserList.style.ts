@@ -18,6 +18,7 @@ export const SortItem = styled.label`
   & select {
     margin: 0;
     padding: 0.6rem 0;
+    background: var(--card-background-color);
   }
 `;
 
@@ -48,10 +49,6 @@ export const User = styled.article`
 
   & header > * {
     margin: 0;
-  }
-
-  & header a {
-    padding: 0.5rem;
   }
 `;
 
